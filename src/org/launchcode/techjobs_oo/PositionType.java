@@ -1,6 +1,7 @@
 package org.launchcode.techjobs_oo;
 
 import javax.swing.text.Position;
+import java.util.Objects;
 
 public class PositionType {
     private int id;
@@ -22,17 +23,20 @@ public class PositionType {
     public String toString(){
         return value;
     }
-    // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
-    //  their id fields match.
+
     @Override
-    public boolean equals(Object o){
-        if (this == o) return true; //immediately return true if it points to the same instance.
-        if (!(o instanceof PositionType)) return false; // check to see if it's an instance of the class.
-        PositionType that = (PositionType) o; //this casts o into a positiontype officially, if it's a compatible type. Polymorphism stuff.
-        //why is the above necessary if line 30 already checks if it's an instance of the class?
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PositionType that = (PositionType) o;
         return id == that.id;
     }
-    // Getters and Setters:
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+// Getters and Setters:
 
     public int getId() {
         return id;
