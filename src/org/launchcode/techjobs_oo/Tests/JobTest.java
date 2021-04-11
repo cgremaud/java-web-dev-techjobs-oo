@@ -65,7 +65,7 @@ public class JobTest {
         assertTrue(jobA.toString().contains("Employer: Data not available"));
         assertTrue(jobA.toString().contains("Location: Data not available"));
         assertTrue(jobA.toString().contains("Position Type: Data not available"));
-//        assertTrue(jobA.toString().contains("Core Competency: Data not available"));
+        assertTrue(jobA.toString().contains("Core Competency: Data not available"));
     }
 
     //This is bonus, but would like to get it working.
