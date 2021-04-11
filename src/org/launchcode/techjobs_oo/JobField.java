@@ -30,6 +30,11 @@ public class JobField {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+        return value;
+    }
+
     public int getId() {
         return id;
     }
