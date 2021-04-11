@@ -46,7 +46,7 @@ public class JobTest {
         assertEquals(" ", jobA.toString().substring(jobA.toString().length() - 1));
 
     }
-
+    //okay I should have just been using the @Before objects the whole time. Don't know why I didn't. Instructions didn't say to though.
     @Test
     public void testReturnsLabelForEachField() {
         Job jobA = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
@@ -56,6 +56,16 @@ public class JobTest {
         assertTrue(jobA.toString().contains("Location: "));
         assertTrue(jobA.toString().contains("Position Type: "));
         assertTrue(jobA.toString().contains("Core Competency: "));
+    }
+
+    @Test
+    public void testDataNotFoundTextWorks() {
+        Job jobA = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+        assertTrue(jobA.toString().contains("Name: Data not available"));
+        assertTrue(jobA.toString().contains("Employer: Data not available"));
+        assertTrue(jobA.toString().contains("Location: Data not available"));
+        assertTrue(jobA.toString().contains("Position Type: Data not available"));
+        assertTrue(jobA.toString().contains("Core Competency: Data not available"));
     }
 
 }

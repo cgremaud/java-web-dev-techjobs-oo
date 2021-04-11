@@ -16,7 +16,7 @@ public class Job {
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
-    //don't need the aId param?
+
     public Job () {
         id = nextId;
         nextId ++;
@@ -49,6 +49,23 @@ public class Job {
 
     @Override
     public String toString() {
+        if (name == "") {
+            name = "Data not available";
+        }
+        if (employer.getValue() == "") {
+            employer.setValue("Data not available");
+        }
+        if (location.getValue() == "") {
+            location.setValue("Data not available");
+        }
+        if (positionType.getValue() == "") {
+            positionType.setValue("Data not available");
+        }
+        if (coreCompetency.getValue() == "") {
+            coreCompetency.setValue("Data not available");
+        }
+
+
         return " " +"\n" + "ID: " + id + "\n" + "Name: " + name + "\n" + "Employer: " + employer.getValue() +"\n" + "Location: " +
                 location.getValue() + "\n" + "Position Type: " + positionType.getValue() + "\n" + "Core Competency: " + coreCompetency.getValue()
                 + " ";
