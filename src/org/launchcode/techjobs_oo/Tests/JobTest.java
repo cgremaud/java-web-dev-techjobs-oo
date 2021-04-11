@@ -47,4 +47,14 @@ public class JobTest {
 
     }
 
+    @Test
+    public void testReturnsLabelForEachField() {
+        assertTrue(jobOne.toString().contains("ID: "));
+        assertTrue(jobOne.toString().contains("Name: "));
+        assertTrue(jobOne.toString().contains("Employer: "));
+        assertTrue(jobOne.toString().contains("Location: "));
+        assertTrue(jobOne.toString().contains("Position Type: "));
+        assertTrue(jobOne.toString().contains("Core Competency: "));
+    }
+
 }
