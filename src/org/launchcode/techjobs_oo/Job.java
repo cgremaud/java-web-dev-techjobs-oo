@@ -53,19 +53,19 @@ public class Job {
 //        if (this == new Job()){
 //            return "OOPS! This job does not seem to exist.";
 //        }
-        if (name == null) {
+        if (name == "") {
             name = "Data not available";
         }
-        if (employer.getValue() == null) {
+        if (employer.getValue() == "") {
             employer.setValue("Data not available");
         }
-        if (location.getValue() == null) {
+        if (location.getValue() == "") {
             location.setValue("Data not available");
         }
-        if (positionType.getValue() == null) {
+        if (positionType.getValue() == "") {
             positionType.setValue("Data not available");
         }
-        if (coreCompetency.getValue() == null) {
+        if (coreCompetency.getValue() == "") {
             coreCompetency.setValue("Data not available");
         }
 

@@ -60,7 +60,7 @@ public class JobTest {
 
     @Test
     public void testDataNotFoundTextWorks() {
-        Job jobA = new Job(null, new Employer(null), new Location(null), new PositionType(null), new CoreCompetency("Stuff"));
+        Job jobA = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
         assertTrue(jobA.toString().contains("Name: Data not available"));
         assertTrue(jobA.toString().contains("Employer: Data not available"));
         assertTrue(jobA.toString().contains("Location: Data not available"));
