@@ -49,7 +49,10 @@ public class Job {
 
     @Override
     public String toString() {
-        return " " + " ";
+        return " " +"\n" + "ID: " + id + "\n" + "Name: " + name + "\n" + "Employer: " + employer.getValue() +"\n" + "Location: " +
+                location.getValue() + "\n" + "Position Type: " + positionType.getValue() + "\n" + "Core Competency: " + coreCompetency.getValue()
+                + " ";
+
     }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID

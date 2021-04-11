@@ -49,12 +49,13 @@ public class JobTest {
 
     @Test
     public void testReturnsLabelForEachField() {
-        assertTrue(jobOne.toString().contains("ID: "));
-        assertTrue(jobOne.toString().contains("Name: "));
-        assertTrue(jobOne.toString().contains("Employer: "));
-        assertTrue(jobOne.toString().contains("Location: "));
-        assertTrue(jobOne.toString().contains("Position Type: "));
-        assertTrue(jobOne.toString().contains("Core Competency: "));
+        Job jobA = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertTrue(jobA.toString().contains("ID: "));
+        assertTrue(jobA.toString().contains("Name: "));
+        assertTrue(jobA.toString().contains("Employer: "));
+        assertTrue(jobA.toString().contains("Location: "));
+        assertTrue(jobA.toString().contains("Position Type: "));
+        assertTrue(jobA.toString().contains("Core Competency: "));
     }
 
 }
