@@ -49,21 +49,26 @@ public class Job {
 
     @Override
     public String toString() {
-        if (name == "") {
+        //This is for the bonus test but it's not working
+//        if (this == new Job()){
+//            return "OOPS! This job does not seem to exist.";
+//        }
+        if (name == null) {
             name = "Data not available";
         }
-        if (employer.getValue() == "") {
+        if (employer.getValue() == null) {
             employer.setValue("Data not available");
         }
-        if (location.getValue() == "") {
+        if (location.getValue() == null) {
             location.setValue("Data not available");
         }
-        if (positionType.getValue() == "") {
+        if (positionType.getValue() == null) {
             positionType.setValue("Data not available");
         }
-        if (coreCompetency.getValue() == "") {
+        if (coreCompetency.getValue() == null) {
             coreCompetency.setValue("Data not available");
         }
+
 
 
         return " " +"\n" + "ID: " + id + "\n" + "Name: " + name + "\n" + "Employer: " + employer.getValue() +"\n" + "Location: " +
