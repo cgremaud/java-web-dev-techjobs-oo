@@ -42,8 +42,8 @@ public class JobTest {
     @Test
     public void testToStringReturnsBlankBeforeAndAfterJobInfo() {
         Job jobA = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertEquals(" ", jobA.toString().charAt(0));
-        assertEquals(" ", jobA.toString().charAt(jobA.toString().length() - 1));
+        assertEquals(" ", jobA.toString().substring(0));
+        assertEquals(" ", jobA.toString().substring(jobA.toString().length() - 1));
 
     }
 
